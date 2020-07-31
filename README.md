@@ -1,0 +1,2 @@
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mikkame&count_private=true&show_icons=true&theme=monokai)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mikkame&layout=compact&theme=monokai)
