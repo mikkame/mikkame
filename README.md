@@ -5,7 +5,9 @@ Full stack enginner of 0 to 1 phase, and civic tech hacker.
 
 # Main Skills.
 
-# ![No.1 of Answer in teratail](https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg)   ![some apps is working.](https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-icon.svg)
+![No.1 of Answer in teratail](https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg)
+![some apps is working.](https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-icon.svg)
+![Love it.](https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg)
 
 
 
