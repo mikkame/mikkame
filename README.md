@@ -2,34 +2,22 @@
 
 Full stack enginner of 0 to 1 phase, and civic tech hacker.
 
+
 # Main Skills.
 
-Laravel & Vue(TS).
-Moving to JAMStack.
+# ![No.1 of Answer in teratail](https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg)   ![some apps is working.](https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-icon.svg)
+
+
 
 # Sub Skills.
+![working some batch apps.](https://www.vectorlogo.zone/logos/python/python-icon.svg)
+![working some desktop apps.](https://www.vectorlogo.zone/logos/electronjs/electronjs-icon.svg)
+![android apps.](https://www.vectorlogo.zone/logos/java/java-icon.svg)
 
-- Python
-  - working some batch apps.
-- C#
-  - working some desktop apps.
-- Electron
-  - working some desktop apps.
-- Java (android)
+![some apps run on AWS(ECS/EB etc)](https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg)
+![some apps run on GCP(CloudRun/AppEngine etc)](https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg)
+![some apps run on Azure(AppServices)](https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg)
 
-- AWS
-  - EB
-  - VPC
-  - ECS
-  - etc
-- GCP
-  - Cloud Run
-  - firebase
-  - firestore
-  - etc
-- Azure
-  - App Services
-  - SQL Server
 
 # Extra Skills.
 
@@ -49,7 +37,4 @@ Moving to JAMStack.
 # Summary
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mikkame&count_private=true&show_icons=true&theme=monokai)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mikkame&layout=compact&theme=monokai)
-
-
 [![trophy](https://github-profile-trophy.vercel.app/?username=mikkame)](https://github.com/ryo-ma/github-profile-trophy)
