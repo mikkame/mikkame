@@ -1,6 +1,8 @@
-# About me
+# About mikka Me
 
 Full stack enginner of 0 to 1 phase, and civic tech hacker.
+
+[![My Qiita contributions](http://qiita-badge.apiapi.app/s/mikkame/contributions.svg)](http://qiita.com/mikkame) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmikkame%2Fmikkame&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 # Recent posts
 
@@ -41,10 +43,7 @@ Full stack enginner of 0 to 1 phase, and civic tech hacker.
 - SharePoint API
 - Box API
 
-# My Qiita works
 
-[![My Qiita followers](http://qiita-badge.apiapi.app/s/mikkame/posts.svg)](http://qiita.com/mikkame) [![My Qiita contributions](http://qiita-badge.apiapi.app/s/mikkame/contributions.svg)](http://qiita.com/mikkame) [![My Qiita followers](http://qiita-badge.apiapi.app/s/mikkame/followers.svg)](http://qiita.com/mikkame)
-                
 # Summary
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mikkame&count_private=true&show_icons=true&theme=monokai)
