@@ -7,11 +7,11 @@ Full stack enginner of 0 to 1 phase, and civic tech hacker.
 # Recent posts
 
 <!--[START POSTS]-->
+- ![](img/zenn.png) [GitHub ProfileをGitHubActionsで自動更新する。](https://zenn.dev/mikkame/articles/db7d2d44a93075)
 - ![](img/qiita.png) [GitHubエコシステムを活用してスライドシステムを作ったよ](https://qiita.com/mikkame/items/b0f144920aba95d1c2be)
 - ![](img/qiita.png) [PHPで個人開発してたら、PHPがめっちゃ叩かれてて辛みだった話](https://qiita.com/mikkame/items/e9e5e0f8aba1617dfc56)
 - ![](img/qiita.png) [PhpSpreadsheetでメモリ爆喰い または、変更してないセルの書き込みで落ちる場合の対処法](https://qiita.com/mikkame/items/e04d7f80f032d26c9bf6)
 - ![](img/qiita.png) [Qiitaコントリビューション数をGitHubのプロフィールに貼ってドヤれるサービスを作った](https://qiita.com/mikkame/items/f2c60d9caf8a8e38ec50)
-- ![](img/qiita.png) [某×サーバ宛のdeployerが動かなくなった件](https://qiita.com/mikkame/items/c5a147b45f52a305d2f7)
 <!--[END POSTS]-->
 
 
