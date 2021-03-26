@@ -7,11 +7,8 @@ Full stack enginner of 0 to 1 phase, and civic tech hacker.
 # Recent posts
 
 <!--[START POSTS]-->
-- ![](img/qiita.png) [🧚‍♂️ブラウザ上でLaravelを実行する環境を作ったよ→Tinkervel🧚‍♂️](https://qiita.com/mikkame/items/ef04678c8c265ce871ff)
 - ![](img/zenn.png) [🧚‍♂️ブラウザ上でLaravelを実行する環境TinkervelのTips🧚‍♂️](https://zenn.dev/mikkame/articles/4926b4b3c0c58d)
 - ![](img/zenn.png) [GitHub ProfileをGitHubActionsで自動更新する。](https://zenn.dev/mikkame/articles/db7d2d44a93075)
-- ![](img/qiita.png) [GitHubエコシステムを活用してスライドシステムを作ったよ](https://qiita.com/mikkame/items/b0f144920aba95d1c2be)
-- ![](img/qiita.png) [PHPで個人開発してたら、PHPがめっちゃ叩かれてて辛みだった話](https://qiita.com/mikkame/items/e9e5e0f8aba1617dfc56)
 <!--[END POSTS]-->
 
 
