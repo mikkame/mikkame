@@ -31,6 +31,7 @@ Full stack enginner of 0 to 1 phase, and civic tech hacker.
 ![some apps run on GCP(CloudRun/AppEngine etc)](https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg)
 ![some apps run on Azure(AppServices)](https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg)
 
+![ios apps.](https://www.vectorlogo.zone/logos/swift/swift-icon.svg)
 
 # Extra Skills.
 
