@@ -44,9 +44,15 @@ Full stack enginner of 0 to 1 phase, and civic tech hacker.
 - SharePoint API
 - Box API
 
+# LAPRAS Score.
+
+<!--START_SECTION:lapras-card-->
+<!--END_SECTION:lapras-card-->
+
 # Activity
 
 ![github-contribution-grid-snake](https://raw.githubusercontent.com/mikkame/mikkame/master/img/snake.svg)
+
 
 # Summary
 

@@ -1,0 +1,21 @@
+name: LAPRAS Card
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update-card:
+    name: LAPRAS Card
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kawamataryo/lapras-card-readme@main
+        with:
+          SHARE_ID: "mikkame"
+          ICON_FIRST: "#e2e0dc"
+          ICON_SECOND: "#cca785"
+          BACKGROUND_FIRST: "#887d65"
+          BACKGROUND_SECOND: "#fcfcfc"
+          LANG: "en"
+          CARD_WIDTH: "350"
