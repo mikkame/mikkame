@@ -49,6 +49,11 @@ Full stack enginner of 0 to 1 phase, and civic tech hacker.
 <!--START_SECTION:lapras-card-->
 <!--END_SECTION:lapras-card-->
 
+# Activity
+
+![github-contribution-grid-snake](https://raw.githubusercontent.com/mikkame/mikkame/master/img/snake.svg)
+
+
 # Summary
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mikkame&count_private=true&show_icons=true&theme=monokai)
