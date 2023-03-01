@@ -48,7 +48,7 @@ Full stack enginner of 0 to 1 phase, and civic tech hacker.
 
 <!--START_SECTION:lapras-card-->
 <a href="https://lapras.com/public/mikkame" target="_blank" rel="noopener noreferrer"><img src="https://lapras-card-generator.vercel.app/api/svg?e=4.11&b=2.85&i=3.48&b1=%23887d65&b2=%23fcfcfc&i1=%23e2e0dc&i2=%23cca785&l=en" width="350" ></a>  
-Last Updated on 2/28/2023, 12:11:27 AM
+Last Updated on 3/1/2023, 12:13:55 AM
 <!--END_SECTION:lapras-card-->
 
 # Activity
