@@ -47,8 +47,8 @@ Full stack enginner of 0 to 1 phase, and civic tech hacker.
 # LAPRAS Score.
 
 <!--START_SECTION:lapras-card-->
-<p ><a href="https://lapras.com/public/mikkame" target="_blank" rel="noopener noreferrer"><img alt="mikkame's scores on LAPRAS are as follows: Engineering: 4.06 out of 5.0, Business: 2.85 out of 5.0, Influence: 3.48 out of 5.0." src="https://lapras-card-generator.vercel.app/api/svg?e=4.06&b=2.85&i=3.48&b1=%23887d65&b2=%23fcfcfc&i1=%23e2e0dc&i2=%23cca785&l=en" width="350" ></a>  
-Last Updated on 8/14/2023, 12:10:28 AM</p>
+<p ><a href="https://lapras.com/public/mikkame" target="_blank" rel="noopener noreferrer"><img alt="mikkame's scores on LAPRAS are as follows: Engineering: 4.27 out of 5.0, Business: 2.85 out of 5.0, Influence: 3.48 out of 5.0." src="https://lapras-card-generator.vercel.app/api/svg?e=4.27&b=2.85&i=3.48&b1=%23887d65&b2=%23fcfcfc&i1=%23e2e0dc&i2=%23cca785&l=en" width="350" ></a>  
+Last Updated on 8/15/2023, 12:10:00 AM</p>
 <!--END_SECTION:lapras-card-->
 
 # Activity
