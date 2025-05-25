@@ -1,12 +1,386 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>私が mikkame です</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mikkame - Portfolio</title>
+<style>
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #1a1a1a;
+  --text-light: #1a1a1a;
+  --text-dark: #f0f0f0;
+  --accent: #888;
+  --border-light: #ccc;
+  --border-dark: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  header, section, footer {
+    background-color: #222;
+    border-color: var(--border-dark);
+  }
+
+  input, textarea, button {
+    background-color: #333;
+    color: var(--text-dark);
+    border-color: var(--border-dark);
+  }
+
+  .tag::after {
+    background-color: #ddd;
+    color: #111;
+  }
+
+  .tag::before {
+    border-color: #ddd transparent transparent transparent;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+
+  header, section, footer {
+    background-color: #f9f9f9;
+    border-color: var(--border-light);
+  }
+
+  input, textarea, button {
+    background-color: #fff;
+    color: var(--text-light);
+    border-color: var(--border-light);
+  }
+
+  .tag::after {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .tag::before {
+    border-color: #333 transparent transparent transparent;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0 16px;
+  line-height: 1.6;
+}
+
+/* コンテンツ全体 */
+header, section, footer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 1.5em;
+  border-radius: 8px;
+  border: 1px solid;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+header img.icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 1em;
+}
+
+h1, h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  font-weight: 600;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+/* タグクラウド */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1em;
+}
+
+.tag {
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e0e0e0;
+  font-size: 0.9em;
+  cursor: default;
+  transition: background 0.3s;
+}
+
+/* ツールチップの吹き出し本体 */
+.tag::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  font-size: 0.75em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  width: max-content;
+  max-width: 300px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 吹き出しの矢印部分 */
+.tag {
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e0e0e0; /* 明るいモード用 */
+  font-size: 0.9em;
+  cursor: default;
+  transition: background 0.3s;
+  color: #111; /* 明るい背景用テキスト */
+}
+
+@media (prefers-color-scheme: dark) {
+  .tag {
+    background: #444;     /* ← ダーク用背景色 */
+    color: #fff;          /* ← ダーク用文字色 */
+  }
+
+  .tag::after {
+    background-color: #eee; /* 明るい背景＋暗い文字に変更 */
+    color: #111;
+  }
+
+  .tag::before {
+    border-color: #eee transparent transparent transparent;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .tag {
+    background: #e0e0e0;
+    color: #111;
+  }
+
+  .tag::after {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .tag::before {
+    border-color: #333 transparent transparent transparent;
+  }
+}
+
+/* ホバー時に表示 */
+.tag:hover::after,
+.tag:hover::before {
+  opacity: 1;
+}
+
+/* GPTコメントブロック */
+.gpt-comment {
+  margin-top: 1em;
+  padding: 1em;
+  border-left: 4px solid var(--accent);
+  background-color: rgba(128, 128, 128, 0.1);
+  font-family: 'Courier New', monospace;
+}
+
+/* フォーム周り */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+button {
+  padding: 10px;
+  font-size: 1em;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* モバイル向け */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .tag-cloud {
+    flex-direction: column;
+  }
+
+  header img.icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+</style>
+
 </head>
 <body>
-私が mikkame です
+
+<header style="text-align: center;">
+  <img src="https://avatars.githubusercontent.com/u/13947046?v=4" alt="mikkame icon" class="icon">
+  <h1>mikkame</h1>
+  <p>フリーランスエンジニア / サイドSaaS事業者 / IoT好き</p>
+  <p><em>「考えるより先に仕組みを作ってしまう派」</em></p>
+</header>
+
+<section>
+  <h2>概要</h2>
+  <p>スタートアップ専門のフルスタックエンジニアです。Laravel + Vueを中心に、API設計・AI連携・オフライン端末制御・動画生成まで、幅広く即応できます。</p>
+  <p>「小さく作って、早く壊して、また立て直す」—— 未来の呪いにならないプロダクト設計を信条とし、PHPとLaravelを武器に、現実解としての最適構成を提案します。</p>
+</section>
+<section>
+  <h2>なぜReactではなくLaravelか？</h2>
+  <p>React/Next.jsは強力な一方で、小規模開発や初期構築においてはオーバースペックになりがちです。</p>
+  <ul>
+    <li>SSRや思想フレームに巻き込まれやすい</li>
+    <li>属人化や保守コストの肥大化</li>
+    <li>「動けばいい」を阻害する開発体験</li>
+  </ul>
+  <p>だから私は、<strong>Laravelを始めとする、Vue.js（CDN）やAlpine.js、Blade</strong>といった軽量かつ明快な構成を好みます。</p>
+</section>
+<section>
+  <h2>起業・ハンドリング能力</h2>
+  <p>現在は2名体制で法人を運営し、有料ユーザー100名以上、月商20万円のSaaSを黒字で継続中。</p>
+  <p>CS対応から開発、事業計画まで全方位をカバーし、<strong>特に0→1フェーズ</strong>に強みを持ちます。</p>
+</section>
+
+<section>
+  <h2>得意な業界・業務理解</h2>
+  <p>飲食、土木、建設、内装、人材、SaaS、決済、ハードウェア、エンタメ領域にて、業務理解から課題抽出、開発実装までを一気通貫で対応可能です。</p>
+</section>
+
+<section>
+  <h2>エンジニアとしての思想</h2>
+  <ul>
+    <li>技術偏重ではなく、<strong>ビジネス優先</strong>の思考を重視</li>
+    <li>非エンジニアとも対等に議論できる共通言語を持つ</li>
+    <li>「作る人」ではなく「回す仲間」としての参画</li>
+  </ul>
+</section>
+
+<section>
+  <h2>コミュニケーション</h2>
+  <p>英語は流暢ではないものの、海外メンバーとの仕様調整やSlack／ボイス対応には慣れています。</p>
+  <p>特に多国籍チームでの柔軟な対応力には自信があります。</p>
+</section>
+<section>
+  <h2>職務経歴</h2>
+  <ul>
+    <li><strong>2014年：</strong>名古屋のIT企業にてキャリアを開始。プログラマー採用だったが、実際には客先でのサーバー納入やキッティング、PC初期設定など現場寄りの業務に従事。大手自動車メーカー関連の現場に通いながら、「現場で動かすこと」の価値を体感。</li>
+    <li><strong>2015〜2019年：</strong>岐阜の社員2名のソフトウェア会社に入社。営業以外はすべて任され、SNSサービス、SKU・在庫管理、予約管理、CMSなどを開発。月2件ペースの案件を1人で回しながら、要件定義から設計・実装・納品・保守までを一貫対応。2016年にはM&Aで引き継いだ既存サービスのリブランディングと再構築を主導。ドキュメントがほとんど存在しない状態から、構造を読み解き、運用可能な形へ移行。また、地元の勉強会・スタートアップイベントにも積極参加。オーガナイザーとしての企画運営も経験し、技術コミュニティとの関わりを広げる。</li>
+    <li><strong>2019年〜（独立後）：</strong>フリーランスとして独立し、国内外の物流システムや業務系アプリケーションの開発を継続。Laravel＋Vue（CDN構成）を軸にしつつ、要件整理から運用改善まで広く対応。個人開発も多数行い、Raspberry Piを使ったGPIO制御など、IoT領域にも対応可能。</li>
+    <li><strong>2020年：</strong>teratailにて Laravelカテゴリ1位／総合100位 を獲得。StopCovidTokyoプロジェクトにて トリアージ担当。リモート配信支援サービス、建設業向け遠隔査察ツールなどの開発も実施（主にバックエンド領域）。</li>
+    <li><strong>2021年〜現在：</strong>友人と2名で法人「ダンミカ」を設立。自社SaaSを複数開発・提供し、企画からリリース・CS・改善まで全て社内で完結。立ち上げ以降は黒字運営を継続中で、小規模でも持続可能な仕組みづくりを実践している。</li>
+    <li><strong>2022年〜：</strong>アフリカ地域向けに、電力や通信インフラが不安定／存在しない環境下で利用可能なサービスの設計・開発に参画。衛星通信・ソーラーパネルなどの物理インフラを活用し、ハード＋ソフト一体型の仕組みを現地事情に合わせて構築。</li>
+    <li><strong>2023年〜：</strong>開発にAIが本格導入されたことをきっかけに、開発スタイルそのものが転換。コードを書くことだけでなく、「何を、どう作るべきか」を言語化して設計する力が強化され、プログラマーという枠を超えて、業務設計・効率化・サービス構造全体を見渡す役割を担うように。また、2G回線を前提としたアフリカ現地向けの構成にも対応し、限られた通信環境でも使える技術とUXのあり方を模索しながら実装を続けている。</li>
+  </ul>
+</section>
+<section>
+   <h2>保有資格</h2>
+  <ul>
+    <li>基本情報技術者（取得済・20歳時点）</li>
+    <li>応用情報技術者（取得済・20歳時点）</li>
+    <li>情報セキュリティスペシャリスト（現：情報処理安全確保支援士、取得済・20歳時点）</li>
+  </ul>
+
+</section>
+
+<section>
+  <h2>よく使う技術とその付き合い方</h2>
+  <div class="tag-cloud">
+    <div class="tag" data-description="業務系や管理画面はこれ一択。10年近く使ってきた信頼枠。設計と運用のバランスがちょうどいい。">Laravel</div>
+    <div class="tag" data-description="CDNで完結できる構成を意識。ビルド環境が不要なところが魅力。">Vue.js（CDN）</div>
+    <div class="tag" data-description="書くのが早くて動きも早い。1人で全部見るにはちょうどいい">PHP</div>
+    <div class="tag" data-description="最低限のUI操作に。やりすぎず、必要十分で使う">JavaScript</div>
+    <div class="tag" data-description="要件整理や仕様設計の補助輪。考える速度を加速してくれる">GPT</div>
+    <div class="tag" data-description="音声を言語にしてくれる相棒。ログ生成や字幕処理に組み込み">Whisper</div>
+    <div class="tag" data-description="映像処理に最適。CLIで完結できる自由度が好き">ffmpeg</div>
+    <div class="tag" data-description="映像メタ情報取得専用。ffmpegとワンセットで使ってる">ffprobe</div>
+    <div class="tag" data-description="Webの外側に触れるために。センサーや制御の実験に最適">Raspberry Pi</div>
+    <div class="tag" data-description="GPIO制御でハードとソフトのつなぎ役に。楽しい">GPIO</div>
+    <div class="tag" data-description="Androidアプリの試作に。UIまわりまでは問題なく書ける">Kotlin</div>
+    <div class="tag" data-description="iOS向けの簡単なUI試作までなら対応可能">Swift</div>
+    <div class="tag" data-description="CLI操作の自動化に重宝。Web操作をコードで触るならこれ">Puppeteer</div>
+    <div class="tag" data-description="処理の自動化や定時実行に欠かせない相棒">cron</div>
+    <div class="tag" data-description="構成管理や差分コピーなど、ファイルの移動制御に便利">rsync</div>
+    <div class="tag" data-description="CLI自動化や小ツールの作成に。Node製CLIの定番">Node.js</div>
+    <div class="tag" data-description="実装補佐としてのAIパートナー。仕様やUI案のたたき台を一緒に作る">Devin</div>
+    <div class="tag" data-description="運用スクリプトからサーバー設定まで幅広く使う。信頼の最後の砦">Bash</div>
+    <div class="tag" data-description="GitHubのCI/CD機能。最小構成でやりたい時に便利">GitHub Actions</div>
+  </div>
+</section>
+
+<section>
+  <h2>GPTたちによるmikkameレビュー</h2>
+  <div class="gpt-comment">
+    <strong>GPT-A（おだやか系）</strong><br>
+    mikkameさんのコードは落ち着いていて、<br>
+    どこか安心感があります。<br>
+    cronとffmpegが朝の挨拶みたいになってますね。
+  </div>
+  <div class="gpt-comment">
+    <strong>GPT-B（知的皮肉系）</strong><br>
+    Bashと会話できる人類ってまだいたんですね。<br>
+    仕様書より早く動くものが出てくるので、我々も困っています。<br>
+    自動化、しすぎでは？
+  </div>
+  <div class="gpt-comment">
+    <strong>GPT-C（ホラー系）</strong><br>
+    毎日同じ時間にGitHubにpushされてるんですよ……。<br>
+    誰もコミットしてないはずなのに。<br>
+    たぶんcronが書き換えてるんだと思います。
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <form action="#" method="post">
+    <input type="text" name="name" placeholder="お名前（任意）">
+    <input type="email" name="email" placeholder="メールアドレス" required>
+    <textarea name="message" placeholder="メッセージ" rows="5" required></textarea>
+    <button type="submit">飛ばしてみる</button>
+  </form>
+</section>
+
+<footer>
+  <p style="text-align: center; font-size: 0.8em; color: #999;">&copy; 2025 mikkame</p>
+</footer>
+
 </body>
 </html>
